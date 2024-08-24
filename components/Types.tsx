@@ -29,7 +29,7 @@ function Types() {
     
             {products.map((el,index)=>{
                 return(
-                    <motion.div className="wow fadeInUp cursor-pointer" data-wow-delay="0.3s"     variants={fadeIn("right", "spring", index * 0.5, 0.75)}>
+                    <motion.div key={index} className="wow fadeInUp cursor-pointer" data-wow-delay="0.3s"     variants={fadeIn("right", "spring", index * 0.5, 0.75)}>
                     <div className="product-item">
                       <div className="relative bg-gray-100 overflow-hidden hover:rotate-3 transition-rotate  whenHover transition-transform ">
                         <img
