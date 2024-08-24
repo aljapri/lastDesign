@@ -90,42 +90,37 @@ export default function SlideBar() {
   );
 }
 
-const sliderData = [
+const sliderData =[
   {
     img: "/img1.jpg",
-    title: "The Grand Canyon",
-    description:
-      "The earth's geological history opens before your eyes in a mile-deep chasm",
-    location: "Arizona",
+    title: "منتجات طازجة",
+    description: "نحن نقدم مجموعة متنوعة من المنتجات الطازجة والعالية الجودة لضمان تلبية احتياجات عائلتك الغذائية.",
+    location: "القسم الأول",
   },
+  
   {
     img: "/img2.jpg",
-    title: "Masai Mara",
-    description:
-      "Wild animals in their natural environment, luxury safari lodges",
-    location: "Kenya",
-  },
-  {
-    img: "/img3.jpg",
-    title: "Masai Mara",
-    description:
-      "Wild animals in their natural environment, luxury safari lodges",
-    location: "Kenya",
-  },
-  {
-    img: "/img4.jpg",
-    title: "Masai Mara",
-    description:
-      "Wild animals in their natural environment, luxury safari lodges",
-    location: "Kenya",
+    title: "زيتون عالي الجودة",
+    description: "نقدم أفضل أنواع الزيتون، سواءً كان زيتون أخضر أو أسود، طازج ومغذٍ ومناسب لجميع استخداماتك.",
+    location: "قسم الزيتون",
   },
   {
     img: "/img5.jpg",
-    title: "Masai Mara",
-    description:
-      "Wild animals in their natural environment, luxury safari lodges",
-    location: "Kenya",
+    title: "خضروات طازجة",
+    description: "تجد لدينا أفضل أنواع الخضروات الطازجة والمغذية، مباشرة من المزارع إلى طاولتك.",
+    location: "قسم الخضروات",
+  },
+  {
+    img: "/img3.jpg",
+    title: "فواكه طازجة",
+    description: "استمتع بأشهى وألذ الفواكه الطازجة المتنوعة لصحة أفضل.",
+    location: "قسم الفواكه",
+  },
+  {
+    img: "/img4.jpg",
+    title: "منتجات عضوية",
+    description: "نوفر لكم خيارات غذائية عضوية صحية تضمن تغذية متكاملة لعائلتك.",
+    location: "القسم الرابع",
   }
 ];
-
 const initData = sliderData[0];
