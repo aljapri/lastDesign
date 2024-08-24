@@ -3,6 +3,7 @@ import React from 'react'
 import {motion} from "framer-motion";
 import { fadeIn } from '@/utils/motion';
 import StarWrapper from '@/hoc/SectionWrapper';
+import Image from 'next/image';
 function Types() {
   return (
 <div className="container mx-auto py-20">
@@ -32,7 +33,7 @@ function Types() {
                     <motion.div key={index} className="wow fadeInUp cursor-pointer" data-wow-delay="0.3s"     variants={fadeIn("right", "spring", index * 0.5, 0.75)}>
                     <div className="product-item">
                       <div className="relative bg-gray-100 overflow-hidden hover:rotate-3 transition-rotate  whenHover transition-transform ">
-                        <img
+                        <Image
                           className="w-full h-[450px] object-cover"
                           src={el.image}
                           alt="Product"

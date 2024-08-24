@@ -39,10 +39,7 @@ const AboutSection = () => {
                   Empowering Each Other to Succeed
                 </h2>
                 <p className="text-gray-500 text-base font-normal leading-relaxed lg:text-start text-center">
-                  Every project we&apos;ve undertaken has been a collaborative
-                  effort, where every person involved has left their mark.
-                  Together, we&apos;ve not only constructed buildings but also built
-                  enduring connections that define our success story.
+                  
                 </p>
               </div>
 
