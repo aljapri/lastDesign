@@ -38,9 +38,8 @@ const AboutSection = () => {
                 <h2 className="text-gray-900 text-4xl font-bold font-manrope leading-normal lg:text-start text-center">
                   Empowering Each Other to Succeed
                 </h2>
-                <p className="text-gray-500 text-base font-normal leading-relaxed lg:text-start text-center">
-                  
-                </p>
+                <p>Every project we&apos;ve undertaken has been a collaborative effort, where every person involved has left their mark. Together, we&apos;ve not only constructed buildings but also built enduring connections that define our success story.</p>
+
               </div>
 
               <div className="w-full lg:justify-start justify-center items-center sm:gap-10 gap-5 inline-flex space-x-20">
