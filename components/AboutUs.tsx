@@ -48,7 +48,7 @@ const AboutSection = () => {
               <div className="w-full lg:justify-start justify-center items-center sm:gap-10 gap-5 inline-flex space-x-20">
                 {aboutUsInformation.map(({number,title,Image}, index) => {
                   return (
-                    <AboutSectionMenu index={index} title = {title} number={number} Image={Image} />
+                    <AboutSectionMenu  index={index} title = {title} number={number} Image={Image}  />
                   );
                 })}
               </div>
@@ -85,6 +85,7 @@ const AboutSectionMenu = ({index,Image,number,title}:any) =>{
     <motion.div
     variants={fadeIn("right", "spring", index * 0.5, 0.75)}
     className="flex-col justify-start items-start inline-flex"
+    key={index}
   >
     <Image className="text-primary text-4xl mb-2" />
     <h3 className="text-gray-900 text-4xl font-bold font-manrope leading-normal">
