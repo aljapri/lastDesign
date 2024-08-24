@@ -44,14 +44,14 @@ const AboutSection = () => {
               </div>
 
               <div className="w-full lg:justify-start justify-center items-center sm:gap-10 gap-5 inline-flex space-x-20">
-                {aboutUsInformation.map(({ number, title, Image }, index) => {
+                {aboutUsInformation.map(({ number, title, Icon }, index) => {
                   return (
                     <AboutSectionMenu
                       key={index} // Added key prop here
                       index={index}
                       title={title}
                       number={number}
-                      Image={Image}
+                      Icon={Icon}
                     />
                   );
                 })}
@@ -69,27 +69,28 @@ const aboutUsInformation = [
   {
     number: "10+",
     title: "Years of Experience",
-    Image: FaBuilding,
+    Icon: FaBuilding,
   },
   {
     number: "20+",
     title: "Products",
-    Image: FaProjectDiagram,
+    Icon: FaProjectDiagram,
   },
   {
     number: "52+",
     title: "Clients",
-    Image: FaSmile,
+    Icon: FaSmile,
   },
 ];
 
-const AboutSectionMenu = ({ index, Image, number, title }: any) => {
+const AboutSectionMenu = ({ index, Icon, number, title }: any) => {
   return (
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className="flex-col justify-start items-start inline-flex"
+      key={index}
     >
-      <Image className="text-primary text-4xl mb-2" /> {/* Fixed usage of Image */}
+      <Icon className="text-primary text-4xl mb-2" /> {/* Fixed usage of Image */}
       <h3 className="text-gray-900 text-4xl font-bold font-manrope leading-normal">
         {number}
       </h3>
