@@ -122,9 +122,9 @@ const menus = [
 
   },
   {
-    name: "اتصل بنا",
-    link: "contactUs",
-    ll:false,
+    name: "تواصل معنا ",
+    link: "contact",
+    ll:true,
 
   },
   {
