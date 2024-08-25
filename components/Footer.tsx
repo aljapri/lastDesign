@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <>
 <footer
-  className="bg-zinc-50 text-center text-surface/75  lg:text-left border-t-2   mt-2">
+  className="bg-zinc-50 dark:bg-dark dark:text-white text-center text-surface/75  lg:text-left border-t-2   mt-2">
   
 
   <div className="mx-6 py-10 text-center md:text-left">

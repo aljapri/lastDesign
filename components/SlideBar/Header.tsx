@@ -11,7 +11,7 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <div className=" absolute mt-5 flex w-full flex-wrap items-center justify-between gap-2 px-5  font-medium uppercase opacity-90 md:px-10 text-xl">
+      <div className=" absolute  mt-5 flex w-full flex-wrap items-center justify-between gap-2 px-5  font-medium uppercase opacity-90 md:px-10 text-xl">
         <Head>
           <title>Cool Project</title>
         </Head>
@@ -27,9 +27,9 @@ function Header() {
             });
           }}
         >
-          <TfiAlignJustify size={20} cursor={"pointer"} />
+          <TfiAlignJustify size={20} cursor={"pointer"} className="dark:text-white" />
         </div>
-        <ul className="  xl:navbar  hidden  ">
+        <ul className="  xl:navbar  hidden   ">
           {menus.map((menu, index) => {
             
             return (
@@ -52,7 +52,7 @@ function Header() {
         
       </div>
       {isOpen && (
-        <ul className=" w-full  absolute  xl:hidden  flex  flex-col-reverse bg  space-y-3 mt-20 px-11 bg-white text-black z-40 py-10">
+        <ul className=" w-full  absolute dark:bg-darkBackground dark:text-white  xl:hidden  flex  flex-col-reverse bg  space-y-3 mt-20 px-11 bg-white text-black z-40 py-10">
           {menus.map((menu, index) => {
             return (
               <a key={index} href={` ${menu.ll ? "/" : "#"}${menu.link}`} onClick={()=>{

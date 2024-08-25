@@ -4,6 +4,7 @@ import AboutUs from "@/components/AboutUs";
 import ContactUs from "@/components/ContactUs";
 import Footer from "@/components/Footer";
 import Location from "@/components/Location";
+import DarkModeToggle from "@/components/shared/DarkModeToggle";
 import WhatsApp from "@/components/shared/WhatsApp";
 import SlideBar from "@/components/SlideBar";
 import Types from "@/components/Types";
@@ -22,14 +23,16 @@ export default function Home() {
       return <div className="w-full flex flex-row justify-center items-center h-screen">Loading...</div>; // Optional loading indicator
     }
   return (
-    <>
-    <SlideBar/>
+<div className="dark:bg-darkBackground ">
+<SlideBar/>
     <AboutUs/>
     <Types/>
     <ContactUs/>
     <Location/>
     <Footer/>
     <WhatsApp/>
-        </>
+    <DarkModeToggle/>
+</div>
+
   );
 }

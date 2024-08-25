@@ -1,0 +1,42 @@
+{
+  "Header": {
+    "title": "Welcome to Shatha Al-Sham",
+    "subTitle": "High-quality food products"
+  },
+  "NavBar": {
+    "main": "Home",
+    "aboutUs": "About Us",
+    "contactUs": "Contact Us",
+    "ourProduct": "Our Products"
+  },
+  "Index": {
+    "title": "Shatha Al-Sham"
+  },
+  "Footer": {
+    "content": "Specializing in providing high-quality food materials, our products are characterized by unique flavor and high nutritional value"
+  },
+  "AboutUs": {
+    "title": "Shatha Al-Sham Company",
+    "content": "Specializing in providing high-quality food materials, our products are characterized by unique flavor and high nutritional value. The company strives to meet customer needs by offering a diverse range of products that meet the highest safety and quality standards."
+  },
+  "Woraq": {
+    "title": "Grape Leaves",
+    "content": "Canned grape leaves are a convenient and quick option for preparing traditional dishes like Yalangi and Dolma, retaining their delicious flavor and nutritional value while simplifying the cooking process."
+  },
+  "Qamar": {
+    "title": "Qamar Al-Din",
+    "content": "Qamar Al-Din is dried apricot juice, one of the most popular Ramadan beverages, known for its delicious taste and numerous nutritional benefits, providing the body with energy and essential nutrients."
+  },
+  "Oil": {
+    "title": "Olive Oil",
+    "content": "Olive oil is a natural health treasure, extracted from olive fruits and considered essential in the Mediterranean diet, known for its multiple benefits for heart, skin, and overall body health."
+  },
+  "Cheese": {
+    "title": "Cheese",
+    "content": "Cheese is a rich source of proteins and calcium, and it is known for its variety of types and flavors around the world, making it a main ingredient in many dishes and cuisines."
+  },
+  "AboutUspage": {
+    "title": "Shatha Al-Sham Company",
+    "content": "Shatha Al-Sham is a leading company in the production and distribution of food products, established with the aim of providing high-quality food products that meet the needs and aspirations of customers. The company specializes in offering a wide range of fresh and canned food products, with a focus on authentic flavor and excellent quality. Since its inception, Shatha Al-Sham has been committed to the highest standards of quality and food safety, earning the trust and appreciation of consumers. The company constantly strives to expand and develop its product range to meet the growing market demands, while maintaining the traditional character and original flavor that distinguish its products. Shatha Al-Sham works on building long-term relationships with local and international suppliers to ensure the provision of the best food ingredients. The company is also committed to sustainable and environmentally responsible practices in all its operations. Whether you are looking for essential cooking ingredients for daily meals or special food products for special occasions, Shatha Al-Sham is the ideal destination to meet your needs with products that combine quality and original flavor."
+  }
+}

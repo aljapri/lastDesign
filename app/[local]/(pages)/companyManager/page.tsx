@@ -26,16 +26,16 @@ const managementTeam = [
 
 export default function Management() {
   return (
-    <div className="min-h-screen bg-gray-100 py-10">
+    <div className="min-h-screen bg-gray-100 py-10 dark:bg-darkBackground dark:!text-white">
       <Head>
         <title>إدارة الشركة | شذا الشام</title>
       </Head>
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-center text-green-700 mb-10">إدارة شركة شذا الشام</h1>
+      <div className="container mx-auto px-4 dark:text-white">
+        <h1 className="text-4xl font-bold text-center dark:text-white text-green-700 mb-10">إدارة شركة شذا الشام</h1>
 
         <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {managementTeam.map((member, index) => (
-            <div key={index} className="bg-white shadow-lg rounded-lg p-6 text-center">
+            <div key={index} className="bg-white dark:bg-darkBlue dark:text-white shadow-lg rounded-lg p-6 text-center">
               <Image
                 src={member.image}
                 alt={member.name}
@@ -43,9 +43,9 @@ export default function Management() {
                 width={100}
                 height={100}
               />
-              <h2 className="text-2xl font-semibold text-gray-800 mb-2">{member.name}</h2>
-              <p className="text-green-600 mb-2">{member.position}</p>
-              <p className="text-gray-600">{member.description}</p>
+              <h2 className="text-2xl font-semibold dark:text-white text-gray-800 mb-2">{member.name}</h2>
+              <p className="text-green-600 mb-2 dark:text-white">{member.position}</p>
+              <p className="text-gray-600 dark:text-white" >{member.description}</p>
             </div>
           ))}
         </div>

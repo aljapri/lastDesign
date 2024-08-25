@@ -44,7 +44,7 @@ const productsData = {
 
 export default function Home() {
   const renderSection = (title:string, products:any,id:string) => (
-    <div className="mb-40 gap-10 mt-10 " id={id} >
+    <div className="mb-40 gap-10 mt-10 dark:bg-darkBackground dark:!text-white" id={id} >
       <h2 className="text-2xl font-bold mb-6">{title}</h2>
       <div className="flex flex-row flex-wrap gap-6 justify-center xl:justify-normal  ">
         {products.map((product:any) => (
