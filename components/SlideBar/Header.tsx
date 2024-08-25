@@ -1,79 +1,77 @@
-import React, { useState } from "react";
+"use client"
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { IoIosGlobe, IoMdSearch, IoMdPerson } from "react-icons/io";
 import Head from "next/head";
 import { TfiAlignJustify } from "react-icons/tfi";
 import { link } from "fs";
 import Link from "next/link";
+import { useRouter } from 'next/navigation'
 
 function Header() {
   const [active, setActive] = React.useState(-1);
   const [isOpen, setIsOpen] = useState(false);
+
+
   return (
     <>
-      <div className=" absolute  mt-5 flex w-full flex-wrap items-center justify-between gap-2 px-5  font-medium uppercase opacity-90 md:px-10 text-xl">
-        <Head>
-          <title>Cool Project</title>
-        </Head>
-        <div className="  flex items-center gap-2 font-medium tracking-[4px] text-2xl">
-          <span className="text-green-800">Shaza</span>{" "}
-          <span className="text-orange-800">Alsham</span>
-        </div>
-        <div
-          className="xl:hidden "
-          onClick={() => {
-            setIsOpen((el) => {
-              return !el;
-            });
-          }}
-        >
-          <TfiAlignJustify size={20} cursor={"pointer"} className="dark:text-white" />
-        </div>
-        <ul className="  xl:navbar  hidden   ">
-          {menus.map((menu, index) => {
-            
-            return (
-              <a href={`${menu.ll ? "/" : "#"}${menu.link}`} key={index} onClick={()=>{
-                setActive(index);
-              }} className="text-sm font-bold"  >
-                <motion.li
-                  layout
-                  className={` ${
-                    active == index && " border-b-2 border-b-primary"
-                  } inline-block cursor-pointer  border-b-primary transition duration-300 ease-in-out hover:border-b-2 hover:text-white`}
-                >
-                  {menu.name}
-                </motion.li>
-              </a>
-            );
-          })}
-            
-        </ul>
-        
+    <div className="absolute mt-5 flex w-full flex-wrap items-center justify-between gap-2 px-5 font-medium uppercase opacity-90 md:px-10 text-xl">
+      <Head>
+        <title>Cool Project</title>
+      </Head>
+      <div className="flex items-center gap-2 font-medium tracking-[4px] text-2xl">
+        <span className="text-green-800">Shaza</span>{" "}
+        <span className="text-orange-800">Alsham</span>
       </div>
-      {isOpen && (
-        <ul className=" w-full  absolute dark:bg-darkBackground dark:text-white  xl:hidden  flex  flex-col-reverse bg  space-y-3 mt-20 px-11 bg-white text-black z-40 py-10">
-          {menus.map((menu, index) => {
-            return (
-              <a key={index} href={` ${menu.ll ? "/" : "#"}${menu.link}`} onClick={()=>{
+      <div
+        className="xl:hidden"
+        onClick={() => setIsOpen((el) => !el)}
+      >
+        <TfiAlignJustify size={20} cursor={"pointer"} className="dark:text-white" />
+      </div>
+      <ul className="xl:navbar hidden">
+        {menus.map((menu, index) => (
+          <Link href={`${menu.ll ? "/ar/" : "#"}${menu.link}`} key={index} legacyBehavior>
+            <a onClick={() => setActive(index)} className="text-sm font-bold">
+              <motion.li
+                layout
+                className={`${
+                  active === index && "border-b-2 border-b-primary"
+                } inline-block cursor-pointer transition duration-300 ease-in-out hover:border-b-2 hover:text-white`}
+              >
+                {menu.name}
+              </motion.li>
+            </a>
+          </Link>
+        ))}
+      </ul>
+    </div>
+
+    {isOpen && (
+      <ul className="absolute w-full flex flex-col-reverse space-y-3 mt-20 px-11 py-10 bg-white text-black z-40 xl:hidden dark:bg-darkBackground dark:text-white">
+        {menus.map((menu, index) => (
+          <Link href={`${menu.ll ? "/ar/" : "#"}${menu.link}`} key={index} legacyBehavior>
+            <a
+              onClick={() => {
                 setActive(index);
                 setIsOpen(false);
-                }} className="font-bold">
-                <motion.li
-                  layout
-                  className={` ${
-                    active == index && " border-b-2 border-b-primary"
-                  } inline-block cursor-pointer  border-b-primary transition duration-300 ease-in-out hover:border-b-2 hover:text-primary`}
-                >
-                  {menu.name}
-                </motion.li>
-              </a>
-            );
-          })}
-        </ul>
-      )}
-      
-    </>
+              }}
+              className="font-bold"
+            >
+              <motion.li
+                layout
+                className={`${
+                  active === index && "border-b-2 border-b-primary"
+                } inline-block cursor-pointer transition duration-300 ease-in-out hover:border-b-2 hover:text-primary`}
+              >
+                {menu.name}
+              </motion.li>
+            </a>
+          </Link>
+        ))}
+      </ul>
+    )}
+  </>
   );
 }
 
