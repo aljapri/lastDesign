@@ -55,6 +55,7 @@ export default function SlideBar() {
       className={`
        ${inter.className}
         relative min-h-screen select-none overflow-hidden text-white antialiased bg-slate-950 `}
+        id="home"
     >
       <AnimatePresence>
         <BackgroundImage

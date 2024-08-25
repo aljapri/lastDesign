@@ -6,7 +6,7 @@ import StarWrapper from '@/hoc/SectionWrapper';
 import Image from 'next/image';
 function Types() {
   return (
-<div className="container mx-auto py-20">
+<div className="container mx-auto py-20" id='products'>
   <div className="w-full">
     <div className="flex flex-wrap gap-5 items-end">
       <div className="lg:w-1/2 w-full">
