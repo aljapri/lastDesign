@@ -12,7 +12,15 @@ import { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
 export default function Home() {
-
+    const [isPageLoaded, setIsPageLoaded] = useState(false);
+    useEffect(() => {
+      // Check if the page was fully reloaded
+        setIsPageLoaded(true);
+      
+    }, []);
+    if (!isPageLoaded) {
+      return <div className="w-full flex flex-row justify-center items-center h-screen">Loading...</div>; // Optional loading indicator
+    }
   return (
     <>
     <SlideBar/>
