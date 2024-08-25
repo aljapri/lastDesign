@@ -35,7 +35,7 @@ function Header() {
             return (
               <a href={`${menu.ll ? "/" : "#"}${menu.link}`} key={index} onClick={()=>{
                 setActive(index);
-              }}  >
+              }} className="text-sm font-bold"  >
                 <motion.li
                   layout
                   className={` ${
@@ -58,7 +58,7 @@ function Header() {
               <a key={index} href={` ${menu.ll ? "/" : "#"}${menu.link}`} onClick={()=>{
                 setActive(index);
                 setIsOpen(false);
-                }}>
+                }} className="font-bold">
                 <motion.li
                   layout
                   className={` ${
