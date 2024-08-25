@@ -42,7 +42,7 @@ const AboutSection = () => {
 
               </div>
 
-              <div className="w-full lg:justify-start justify-center items-center sm:gap-10 gap-5 inline-flex space-x-20">
+              <div className="w-full lg:justify-start justify-center items-center sm:gap-10 gap-5 inline-flex space-x-5">
                 {aboutUsInformation.map(({ number, title, Icon }, index) => {
                   return (
                     <AboutSectionMenu
