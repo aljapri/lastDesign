@@ -3,10 +3,18 @@ import { FaBuilding, FaProjectDiagram, FaSmile } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { fadeIn, slideIn } from "../utils/motion";
 import { SectionWrapper } from "@/hoc";
+import enMessages from '@/messages/en.json';
+import arMessages from '@/messages/ar.json';
+import { usePathname } from "next/navigation";
 
 const AboutSection = () => {
+  const pathName = usePathname();
+  const currentLanguage = pathName.split("/")[1] === "ar" ? "ar" : "en";
+  const messages = currentLanguage === "ar" ? arMessages : enMessages;
+  const aboutSectionInfo = messages.aboutSection.info;
+
   return (
-    <section className=" sm:py-40 relative "     id="aboutUs">
+    <section className="sm:py-40 relative" id="aboutUs">
       <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
         <div className="w-full justify-start items-center gap-12 grid lg:grid-cols-2 grid-cols-1">
           <div className="w-full justify-center items-start gap-6 grid sm:grid-cols-2 grid-cols-1 lg:order-first order-last">
@@ -36,24 +44,23 @@ const AboutSection = () => {
             <div className="w-full flex-col justify-center items-start gap-8 flex">
               <div className="w-full flex-col justify-start lg:items-start items-center gap-3 flex">
                 <h2 className="text-gray-900 text-4xl font-bold font-manrope leading-normal lg:text-start text-center dark:text-white">
-                  Empowering Each Other to Succeed
+                  {messages.aboutSection.heading}
                 </h2>
-                <p className="dark:text-white">Every project we&apos;ve undertaken has been a collaborative effort, where every person involved has left their mark. Together, we&apos;ve not only constructed buildings but also built enduring connections that define our success story.</p>
-
+                <p className="dark:text-white">
+                  {messages.aboutSection.paragraph}
+                </p>
               </div>
 
               <div className="w-full lg:justify-start justify-center items-center sm:gap-10 gap-5 inline-flex space-x-5 dark:text-white">
-                {aboutUsInformation.map(({ number, title, Icon }, index) => {
-                  return (
-                    <AboutSectionMenu
-                      key={index} // Added key prop here
-                      index={index}
-                      title={title}
-                      number={number}
-                      Icon={Icon}
-                    />
-                  );
-                })}
+                {aboutSectionInfo.map(({ number, title }, index) => (
+                  <AboutSectionMenu
+                    key={index}
+                    index={index}
+                    title={title}
+                    number={number}
+                    Icon={aboutUsInformation[index].Icon}
+                  />
+                ))}
               </div>
             </div>
           </div>
@@ -62,6 +69,7 @@ const AboutSection = () => {
     </section>
   );
 };
+
 export default SectionWrapper(AboutSection, "aboutSection");
 
 const aboutUsInformation = [
@@ -89,7 +97,7 @@ const AboutSectionMenu = ({ index, Icon, number, title }: any) => {
       className="flex-col dark:text-white justify-start items-start inline-flex"
       key={index}
     >
-      <Icon className="text-primary dark:text-white text-4xl mb-2" /> {/* Fixed usage of Image */}
+      <Icon className="text-primary dark:text-white text-4xl mb-2" />
       <h3 className="text-gray-900 dark:text-white text-4xl font-bold font-manrope leading-normal">
         {number}
       </h3>

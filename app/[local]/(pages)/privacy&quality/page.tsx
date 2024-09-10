@@ -1,29 +1,45 @@
+"use client";
 import Head from 'next/head';
+import { usePathname } from 'next/navigation';
+import enMessages from '@/messages/en.json';
+import arMessages from '@/messages/ar.json';
 
 export default function QualityPolicy() {
+  const pathName = usePathname();
+  const currentLanguage = pathName.split("/")[1] === "ar" ? "ar" : "en"; // Detect current language
+  const messages = currentLanguage === "ar" ? arMessages : enMessages; // Select the appropriate messages
+  
+  // Set text direction based on language
+  const textDirection = currentLanguage === "ar" ? "rtl" : "ltr";
+
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center dark:bg-darkBackground dark:text-white">
+    <div 
+      className={`min-h-screen bg-gray-100 flex items-center justify-center dark:bg-darkBackground dark:text-white text-center`} 
+      dir={textDirection} // Set text direction dynamically
+    >
       <Head>
-        <title className="dark:!text-white">سياسة الجودة وسلامة الغذاء | شذا الشام</title>
+        <title>{messages.qualityPolicy.title}</title>
       </Head>
-      <div className="bg-white shadow-lg rounded-lg p-8 max-w-3xl dark:bg-darkBlue text-right dark:!text-white dark:">
-        <h1 className="text-3xl font-bold text-center ark:!text-white text-green-700 mb-6 dark:!text-white">سياسة الجودة وسلامة الغذاء لشركة شذا الشام</h1>
-        <p className="text-gray-700 mb-4 leading-relaxed dark:!text-white">
-          في شذا الشام، نلتزم بتقديم منتجات غذائية عالية الجودة تلبي أعلى معايير السلامة. إن التزامنا بالتميز يدفعنا لتطبيق إجراءات صارمة لمراقبة الجودة في كل خطوة من خطوات عملية الإنتاج.
+      <div className="bg-white shadow-lg rounded-lg p-8 max-w-3xl dark:bg-darkBlue text-right dark:text-white">
+        <h1 className="text-3xl font-bold text-center text-green-700 mb-6 dark:text-white" >
+          {messages.qualityPolicy.header} 
+        </h1>
+        <p className="text-gray-700 mb-4 leading-relaxed dark:text-white" dir='ltr'>
+          {messages.qualityPolicy.commitmentsTitle}
         </p>
-        <h2 className="text-2xl font-semibold text-green-600 dark:!text-white mb-4">التزاماتنا بالجودة</h2>
-        <ul className="list-none list-inside mb-4 text-gray-700 dark:text-white ark:!text-white">
-          <li>ضمان أعلى معايير سلامة الغذاء والنظافة.</li>
-          <li>التحسين المستمر من خلال عمليات التدقيق والفحص الدورية.</li>
-          <li>الامتثال للأنظمة المحلية والدولية المتعلقة بسلامة الغذاء.</li>
-          <li>استخدام أجود المكونات في جميع منتجاتنا.</li>
+        <ul className="list-none list-inside mb-4 text-gray-700 dark:text-white">
+          {messages.qualityPolicy.commitments.map((commitment, index) => (
+            <li key={index}>{commitment}</li>
+          ))}
         </ul>
-        <h2 className="text-2xl font-semibold text-green-600 dark:!text-white mb-4">سياسة سلامة الغذاء</h2>
+        <h2 className="text-2xl font-semibold text-green-600 dark:text-white mb-4">
+          {messages.qualityPolicy.foodSafetyTitle}
+        </h2>
         <p className="text-gray-700 mb-4 leading-relaxed dark:text-white">
-          نحن نلتزم بممارسات سلامة الغذاء المعترف بها عالميًا لضمان أن كل منتج نقدمه آمن وصحي للاستهلاك. يعمل فريقنا على الحفاظ على ثقافة سلامة الغذاء، من خلال مراقبة كل مرحلة من مراحل الإنتاج بعناية.
+          {messages.qualityPolicy.foodSafetyContent}
         </p>
         <p className="text-gray-700 leading-relaxed dark:text-white">
-          من خلال التدريب المنتظم وتحديث عملياتنا، نضمن أن منتجاتنا تظل متوافقة مع المعايير المتطورة في صناعة الغذاء.
+          {messages.qualityPolicy.foodSafetyContentAdditional}
         </p>
       </div>
     </div>

@@ -1,42 +1,212 @@
 {
-  "Header": {
-    "title": "Welcome to Shatha Al-Sham",
-    "subTitle": "High-quality food products"
+  "logo_name": {
+    "first": "Shaza",
+    "second": "Alsham"
   },
-  "NavBar": {
-    "main": "Home",
-    "aboutUs": "About Us",
-    "contactUs": "Contact Us",
-    "ourProduct": "Our Products"
+  "menus": [
+    { "name": "Job opportunities", "link": "works" },
+    { "name": "Privacy and Quality", "link": "privacy&quality" },
+    { "name": "Contact Us", "link": "contact" },
+    { "name": "Our Products", "link": "products" },
+    { "name": "About Us", "link": "aboutUs" },
+    { "name": "Home", "link": "" }
+  ],
+  "languages": {
+    "ar": "Arabic",
+    "en": "English"
   },
-  "Index": {
-    "title": "Shatha Al-Sham"
+  "phone": "Phone",
+  "slides": [
+    {
+      "img": "/img1.jpg",
+      "title": "Fresh Products",
+      "description": "We offer a variety of fresh and high-quality products to meet your family's food needs.",
+      "location": "Section One"
+    },
+    {
+      "img": "/img2.jpg",
+      "title": "High-Quality Olives",
+      "description": "We offer the best types of olives, whether green or black, fresh, nutritious, and suitable for all your uses.",
+      "location": "Olives Section"
+    },
+    {
+      "img": "/img5.jpg",
+      "title": "Fresh Vegetables",
+      "description": "We have the best fresh and nutritious vegetables, straight from the farm to your table.",
+      "location": "Vegetables Section"
+    },
+    {
+      "img": "/img3.jpg",
+      "title": "Fresh Fruits",
+      "description": "Enjoy the most delicious and varied fresh fruits for better health.",
+      "location": "Fruits Section"
+    },
+    {
+      "img": "/img4.jpg",
+      "title": "Organic Products",
+      "description": "We provide you with healthy organic food options to ensure complete nutrition for your family.",
+      "location": "Section Four"
+    }
+  ],
+  "aboutSection": {
+    "heading": "Empowering Each Other to Succeed",
+   "paragraph": "In every step we take towards the future, we place quality at the forefront of our priorities. Together, we work passionately to ensure we deliver the best food products to our customers, with every partnership we establish becoming a part of our ongoing story of delivering excellence.",
+    "info": [
+      {
+        "number": "10+",
+        "title": "Years of Experience"
+      },
+      {
+        "number": "20+",
+        "title": "Products"
+      },
+      {
+        "number": "52+",
+        "title": "Clients"
+      }
+    ]
   },
-  "Footer": {
-    "content": "Specializing in providing high-quality food materials, our products are characterized by unique flavor and high nutritional value"
+  "contactUs": {
+    "title": "Contact Us",
+    "description": "If you have any questions or need support, feel free to contact us. We are here to help you and meet all your needs.",
+    "phone": "+012 345 67890",
+    "email": "info@example.com",
+    "address":"Office address",
+    "address1": "23 Street, New York, United States",
+    "followUs": "Follow Us",
+    "contactForm": "The contact form is currently disabled. Get a working contact form using Ajax and PHP in just a few minutes. Simply copy and paste the files, add some code, and you’re done. <a class='text-blue-600 underline' href='https://htmlcodex.com/contact-form'>Download Now</a>.",
+    "name": "Your Name",
+    "emailLabel": "Your Email",
+    "subject": "Subject",
+    "message": "Message",
+    "sendMessage": "Send Message"
   },
-  "AboutUs": {
-    "title": "Shatha Al-Sham Company",
-    "content": "Specializing in providing high-quality food materials, our products are characterized by unique flavor and high nutritional value. The company strives to meet customer needs by offering a diverse range of products that meet the highest safety and quality standards."
+  "footer": {
+    "companyName": "Shaza Alsham",
+    "companyDescription": "Shaza Alsham is a company specializing in providing the finest local food products, committed to offering high-quality products that meet our customers' needs.",
+    "usefulLinks": "Useful links",
+    "contact": "Contact",
+    "address": "New York, NY 10012, US",
+    "email": "info@example.com",
+    "phone": "+01 234 567 88",
+    "fax": "+01 234 567 89",
+    "socialMedia": "Social Media",
+    "footerNote": "© 2023 Copyright: Shaza Alsham"
   },
-  "Woraq": {
-    "title": "Grape Leaves",
-    "content": "Canned grape leaves are a convenient and quick option for preparing traditional dishes like Yalangi and Dolma, retaining their delicious flavor and nutritional value while simplifying the cooking process."
+  "types": {
+    "header": "Our Products",
+    "description": "Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.",
+    "items": [
+      {
+        "id": 1,
+        "label": "Jams",
+        "link": "jams",
+        "image": "/jam.jpg"
+      },
+      {
+        "id": 2,
+        "label": "Olives and Stuffed",
+        "link": "olives",
+        "image": "/olive.jpg"
+      },
+      {
+        "id": 3,
+        "label": "Pickles",
+        "link": "pinks",
+        "image": "/pickle.jpg"
+      },
+      {
+        "id": 4,
+        "label": "Canned Goods",
+        "link": "peans",
+        "image": "/peans.jpg"
+      }
+    ]
   },
-  "Qamar": {
-    "title": "Qamar Al-Din",
-    "content": "Qamar Al-Din is dried apricot juice, one of the most popular Ramadan beverages, known for its delicious taste and numerous nutritional benefits, providing the body with energy and essential nutrients."
+  "about": {
+    "title": "About Shaza Alsham",
+    "sections": {
+      "whoWeAre": {
+        "title": "Who We Are",
+        "content": "Shaza Alsham is a leading company in the food products sector, specializing in offering the finest local and natural food products. We are committed to providing high-quality products that meet consumer needs and achieve customer satisfaction."
+      },
+      "vision": {
+        "title": "Our Vision",
+        "content": "To be at the forefront of food companies in the region, continuously developing our products and adhering to the highest standards of quality and safety to provide the best value to our customers."
+      },
+      "mission": {
+        "title": "Our Mission",
+        "content": "To deliver healthy and natural food products with exceptional quality, while adhering to ethical and professional values in all aspects of our work."
+      },
+      "values": {
+        "title": "Our Values",
+        "content": [
+          "Quality: We strive to provide the best products with the highest standards of quality.",
+          "Integrity: We are committed to transparency and honesty in all our dealings.",
+          "Innovation: We constantly seek new ways to improve our products and services.",
+          "Sustainability: We are committed to practices that protect the environment and support the community."
+        ]
+      },
+      "history": {
+        "title": "Our History",
+        "content": "Shaza Alsham was established in [Year of Establishment], and since then we have been striving for excellence in the food sector. Thanks to our dedication and commitment to quality, we have built a strong reputation and earned the trust of our customers."
+      },
+      "services": {
+        "title": "Our Services",
+        "content": "We offer a wide range of food products including oils, canned goods, spices, and more. We work on developing innovative products that meet consumer needs and keep up with the latest trends in the food industry."
+      }
+    }
   },
-  "Oil": {
-    "title": "Olive Oil",
-    "content": "Olive oil is a natural health treasure, extracted from olive fruits and considered essential in the Mediterranean diet, known for its multiple benefits for heart, skin, and overall body health."
+  "qualityPolicy": {
+    "title": "Quality and Food Safety Policy | Shaza Alsham",
+    "header": "Quality and Food Safety Policy of Shaza Alsham",
+    "commitmentsTitle": "Our Quality Commitments",
+    "commitments": [
+      "Ensuring the highest standards of food safety and hygiene.",
+      "Continuous improvement through regular audits and inspections.",
+      "Compliance with local and international food safety regulations.",
+      "Using the finest ingredients in all our products."
+    ],
+    "foodSafetyTitle": "Food Safety Policy",
+    "foodSafetyContent": "We are committed to globally recognized food safety practices to ensure that every product we provide is safe and healthy for consumption. Our team maintains a culture of food safety by carefully monitoring every stage of production.",
+    "foodSafetyContentAdditional": "Through regular training and updating our processes, we ensure that our products remain compliant with evolving standards in the food industry."
   },
-  "Cheese": {
-    "title": "Cheese",
-    "content": "Cheese is a rich source of proteins and calcium, and it is known for its variety of types and flavors around the world, making it a main ingredient in many dishes and cuisines."
+  "products": {
+    "jams": "Jams",
+    "olive": "Olives",
+    "peanuts": "Peanuts",
+    "pinks": "Pinks"
   },
-  "AboutUspage": {
-    "title": "Shatha Al-Sham Company",
-    "content": "Shatha Al-Sham is a leading company in the production and distribution of food products, established with the aim of providing high-quality food products that meet the needs and aspirations of customers. The company specializes in offering a wide range of fresh and canned food products, with a focus on authentic flavor and excellent quality. Since its inception, Shatha Al-Sham has been committed to the highest standards of quality and food safety, earning the trust and appreciation of consumers. The company constantly strives to expand and develop its product range to meet the growing market demands, while maintaining the traditional character and original flavor that distinguish its products. Shatha Al-Sham works on building long-term relationships with local and international suppliers to ensure the provision of the best food ingredients. The company is also committed to sustainable and environmentally responsible practices in all its operations. Whether you are looking for essential cooking ingredients for daily meals or special food products for special occasions, Shatha Al-Sham is the ideal destination to meet your needs with products that combine quality and original flavor."
+  "productCategories": {
+    "jams": [
+      { "id": 1, "src": "/jams/jam1.png", "name": "Strawberry Jam" },
+      { "id": 2, "src": "/jams/jam2.png", "name": "Blueberry Jam" },
+      { "id": 3, "src": "/jams/jam3.png", "name": "Blueberry Jam" },
+      { "id": 4, "src": "/jams/jam4.png", "name": "Blueberry Jam" },
+      { "id": 5, "src": "/jams/jam5.png", "name": "Blueberry Jam" },
+      { "id": 6, "src": "/jams/jam6.png", "name": "Blueberry Jam" },
+      { "id": 7, "src": "/jams/jam7.png", "name": "Blueberry Jam" }
+    ],
+    "olive": [
+      { "id": 1, "src": "/olive/olive1.png", "name": "Green Olives" },
+      { "id": 2, "src": "/olive/olive2.png", "name": "Black Olives" },
+      { "id": 3, "src": "/olive/olive3.png", "name": "Black Olives" },
+      { "id": 4, "src": "/olive/olive4.png", "name": "Black Olives" },
+      { "id": 5, "src": "/olive/olive5.png", "name": "Black Olives" }
+    ],
+    "peanuts": [
+      { "id": 1, "src": "/peans/peans1.png", "name": "Salted Peanuts" },
+      { "id": 2, "src": "/peans/peans2.png", "name": "Roasted Peanuts" },
+      { "id": 3, "src": "/peans/peans3.png", "name": "Roasted Peanuts" },
+      { "id": 4, "src": "/peans/peans4.png", "name": "Roasted Peanuts" },
+      { "id": 5, "src": "/peans/peans5.png", "name": "Roasted Peanuts" },
+      { "id": 6, "src": "/peans/peans6.png", "name": "Roasted Peanuts" }
+    ],
+    "pinks": [
+      { "id": 1, "src": "/pink/pink1.png", "name": "Pink Item 1" },
+      { "id": 2, "src": "/pink/pink2.png", "name": "Pink Item 2" },
+      { "id": 3, "src": "/pink/pink3.png", "name": "Pink Item 3" },
+      { "id": 4, "src": "/pink/pink4.png", "name": "Pink Item 4" }
+    ]
   }
 }

@@ -1,6 +1,6 @@
 // pages/index.js
 import Image from 'next/image';
-
+import { usePathname } from 'next/navigation';
 const productsData = {
   jams: [
     { id: 1, src: '/jams/jam1.png', name: 'Strawberry Jam' },
@@ -42,7 +42,10 @@ const productsData = {
   ],
 };
 
+
+
 export default function Home() {
+  
   const renderSection = (title:string, products:any,id:string) => (
     <div className="mb-40 gap-10 mt-10 dark:bg-darkBackground dark:!text-white" id={id} >
       <h2 className="text-2xl font-bold mb-6">{title}</h2>
