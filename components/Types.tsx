@@ -21,7 +21,7 @@ function Types() {
           <div className="lg:w-1/2 w-full">
             <div className="max-w-xl mb-10" data-wow-delay="0.1s">
               <h1 className="text-4xl font-bold mb-4 dark:text-white">{messages.types.header}</h1>
-              <p className="text-gray-600 dark:text-white">
+              <p className="text-gray-600 dark:text-white text-xl">
                 {messages.types.description}
               </p>
             </div>

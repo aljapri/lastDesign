@@ -54,7 +54,7 @@ const ContactUs = () => {
             </h5>
             <p className="mb-4">
               <FaMapMarkerAlt className="inline-block mr-3" />
-              {contactMessages.address}
+              {contactMessages.address1}
             </p>
             <h5 className="text-xl font-semibold mb-2 dark:text-white">
               {contactMessages.followUs}

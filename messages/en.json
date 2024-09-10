@@ -12,7 +12,7 @@
     { "name": "Home", "link": "" }
   ],
   "languages": {
-    "ar": "Arabic",
+    "ar": "العربية",
     "en": "English"
   },
   "phone": "Phone",
@@ -69,10 +69,10 @@
   "contactUs": {
     "title": "Contact Us",
     "description": "If you have any questions or need support, feel free to contact us. We are here to help you and meet all your needs.",
-    "phone": "+012 345 67890",
+    "phone": "+963 989557805 ",
     "email": "info@example.com",
     "address":"Office address",
-    "address1": "23 Street, New York, United States",
+    "address1": "Halbouni, Damascus, Syrian Arab Republic",
     "followUs": "Follow Us",
     "contactForm": "The contact form is currently disabled. Get a working contact form using Ajax and PHP in just a few minutes. Simply copy and paste the files, add some code, and you’re done. <a class='text-blue-600 underline' href='https://htmlcodex.com/contact-form'>Download Now</a>.",
     "name": "Your Name",
@@ -86,16 +86,16 @@
     "companyDescription": "Shaza Alsham is a company specializing in providing the finest local food products, committed to offering high-quality products that meet our customers' needs.",
     "usefulLinks": "Useful links",
     "contact": "Contact",
-    "address": "New York, NY 10012, US",
+    "address": "Halbouni, Damascus, Syrian Arab Republic",
     "email": "info@example.com",
-    "phone": "+01 234 567 88",
-    "fax": "+01 234 567 89",
+    "phone": "+963 989557805",
+    "fax": "+963 2232014",
     "socialMedia": "Social Media",
     "footerNote": "© 2023 Copyright: Shaza Alsham"
   },
   "types": {
     "header": "Our Products",
-    "description": "Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.",
+    "description": " We take care to select the best natural ingredients to ensure a delicious taste and high nutritional value.",
     "items": [
       {
         "id": 1,
@@ -174,7 +174,7 @@
   "products": {
     "jams": "Jams",
     "olive": "Olives",
-    "peanuts": "Peanuts",
+    "peanuts": "Canned foods",
     "pinks": "Pinks"
   },
   "productCategories": {
@@ -207,6 +207,50 @@
       { "id": 2, "src": "/pink/pink2.png", "name": "Pink Item 2" },
       { "id": 3, "src": "/pink/pink3.png", "name": "Pink Item 3" },
       { "id": 4, "src": "/pink/pink4.png", "name": "Pink Item 4" }
+    ]
+  },
+  "careers": {
+    "title": "Careers | Shatha Al Sham",
+    "header": "Careers at Shatha Al Sham",
+    "intro": "Join our team and contribute to delivering high-quality food products.",
+    "jobs": [
+      {
+        "title": "Sales Manager",
+        "description": "We are looking for a Sales Manager with experience in sales and customer relations.",
+        "requirements": [
+          "At least 3 years of experience in sales.",
+          "Strong communication skills.",
+          "Ability to work under pressure."
+        ]
+      },
+      {
+        "title": "Financial Accountant",
+        "description": "We need a Financial Accountant experienced in preparing financial reports and data analysis.",
+        "requirements": [
+          "Bachelor's degree in accounting or finance.",
+          "At least 5 years of experience.",
+          "Proficiency in financial software such as Excel and SAP."
+        ]
+      },
+      {
+        "title": "Marketing Manager",
+        "description": "We are looking for a Marketing Manager experienced in developing marketing strategies and driving sales.",
+        "requirements": [
+          "Bachelor's degree in marketing or a related field.",
+          "At least 7 years of experience in marketing.",
+          "Creativity and ability to manage marketing teams."
+        ]
+      },
+      {
+        "title": "Factory Worker",
+        "description": "We are looking for a factory worker to work in production lines, capable of handling machinery and equipment.",
+        "requirements": [
+          "Ability to work in a manufacturing environment.",
+          "Punctuality and discipline.",
+          "Teamwork skills.",
+          "No prior experience required (training available)."
+        ]
+      }
     ]
   }
 }

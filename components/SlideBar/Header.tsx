@@ -6,6 +6,7 @@ import Image from "next/image";
 import { TfiAlignJustify } from "react-icons/tfi";
 import enMessages from '@/messages/en.json';
 import arMessages from '@/messages/ar.json';
+import Link from "next/link";
 
 export default function Header() {
   const router = useRouter();
@@ -31,7 +32,7 @@ export default function Header() {
     <header className="bg-white dark:bg-darkBackground shadow-md">
       <div className="container mx-auto flex justify-between items-center p-4">
         {/* Logo */}
-        <div className="text-2xl font-bold text-gray-900 dark:text-white flex flex-row justify-center items-center ">
+        <Link href={"/"} className="text-2xl font-bold text-gray-900 dark:text-white flex flex-row justify-center items-center ">
           <Image
             src={"/logo.png"}
             width={100}
@@ -40,7 +41,7 @@ export default function Header() {
           />
           <span className="text-green-800">{messages.logo_name.first}</span>{" "}
           <span className="text-orange-800">{messages.logo_name.second}</span>
-        </div>
+        </Link>
 
         {/* Menu */}
         <nav>
