@@ -118,7 +118,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="bg-black/5 p-6 text-center">
+      <div className="bg-black/5 p-6 text-center flex flex-row justify-center items-center">
         <span>© 2023 Copyright:</span>
         <p className="font-semibold " >
           Shaza Alsham
