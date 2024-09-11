@@ -120,9 +120,9 @@ const Footer = () => {
 
       <div className="bg-black/5 p-6 text-center">
         <span>© 2023 Copyright:</span>
-        <a className="font-semibold" href="https://tw-elements.com/">
+        <p className="font-semibold " >
           Shaza Alsham
-        </a>
+        </p>
       </div>
     </footer>
   );
