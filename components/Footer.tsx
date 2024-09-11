@@ -1,3 +1,4 @@
+
 import React from "react";
 import { usePathname, useRouter } from "next/navigation";
 import enMessages from "@/messages/en.json";
@@ -21,7 +22,7 @@ const Footer = () => {
       <div className="mx-6 py-10 text-center md:text-left">
         <div className="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="">
-            <h1 className="font-bold text-primary mb-4 text-3xl">
+            <h1 className="font-bold text-primary mb-4 text-3xl logoFont">
               Shaza<span className="text-secondary">Alsham</span>
             </h1>
             <p>
