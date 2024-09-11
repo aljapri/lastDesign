@@ -4,9 +4,10 @@ import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { TfiAlignJustify } from "react-icons/tfi";
-import enMessages from '@/messages/en.json';
-import arMessages from '@/messages/ar.json';
+import enMessages from "@/messages/en.json";
+import arMessages from "@/messages/ar.json";
 import Link from "next/link";
+import { MdOutlineLanguage } from "react-icons/md";
 
 export default function Header() {
   const router = useRouter();
@@ -32,15 +33,17 @@ export default function Header() {
     <header className="bg-white dark:bg-darkBackground shadow-md">
       <div className="container mx-auto flex justify-between items-center p-4">
         {/* Logo */}
-        <Link href={"/"} className="text-2xl font-bold text-gray-900 dark:text-white flex flex-row justify-center items-center ">
-          <Image
-            src={"/logo.png"}
-            width={100}
-            height={70}
-            alt="logo"
-          />
-          <span className="text-green-800">{messages.logo_name.first}</span>{" "}
-          <span className="text-orange-800">{messages.logo_name.second}</span>
+        <Link
+          href={"/"}
+          className="text-2xl font-bold text-gray-900 dark:text-white flex flex-row justify-center items-center "
+        >
+          <Image src={"/logo.png"} width={100} className="sm:w-[100px] w-[50px]" height={70} alt="logo" />
+          <span className="text-green-800 logoFont sm:text-2xl text-xl">
+            {messages.logo_name.first}
+          </span>{" "}
+          <span className="text-orange-800 logoFont  sm:text-2xl text-xl">
+            {messages.logo_name.second}
+          </span>
         </Link>
 
         {/* Menu */}
@@ -59,7 +62,8 @@ export default function Header() {
         </nav>
 
         {/* Language Selector */}
-        <div className="relative">
+        <div className="relative flex flex-row justify-center items-center space-x-2 sm:text-xl text-sm ">
+        <MdOutlineLanguage size={25} className="dark:text-white text-dark"/>
           <select
             title="language"
             onChange={handleLanguageChange}
@@ -87,7 +91,7 @@ export default function Header() {
 
       {/* Mobile Dropdown Menu */}
       {isMenuOpen && (
-        <nav dir={currentLanguage === 'ar' ? "rtl" : "ltr"}>
+        <nav dir={currentLanguage === "ar" ? "rtl" : "ltr"}>
           <ul className="xl:hidden bg-white px-5 dark:bg-darkBackground shadow-md flex flex-col-reverse">
             {messages.menus.map((menu, index) => (
               <li
