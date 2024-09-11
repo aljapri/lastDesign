@@ -70,7 +70,7 @@
     "title": "Contact Us",
     "description": "If you have any questions or need support, feel free to contact us. We are here to help you and meet all your needs.",
     "phone": "+963 989557805 ",
-    "email": "info@example.com",
+    "email": "shazaalshamcompany@gmail.com",
     "address":"Office address",
     "address1": "Halbouni, Damascus, Syrian Arab Republic",
     "followUs": "Follow Us",
@@ -87,9 +87,9 @@
     "usefulLinks": "Useful links",
     "contact": "Contact",
     "address": "Halbouni, Damascus, Syrian Arab Republic",
-    "email": "info@example.com",
+    "email": "shazaalshamcompany@gmail.com",
     "phone": "+963 989557805",
-    "fax": "+963 2232014",
+    "fax": "+963 112232014",
     "socialMedia": "Social Media",
     "footerNote": "© 2023 Copyright: Shaza Alsham"
   },
@@ -195,8 +195,8 @@
       { "id": 5, "src": "/olive/olive5.png", "name": "Black Olives" }
     ],
     "peanuts": [
-      { "id": 1, "src": "/peans/peans1.png", "name": "Salted Peanuts" },
-      { "id": 2, "src": "/peans/peans2.png", "name": "Roasted Peanuts" },
+      { "id": 1, "src": "/peans/peans1.jpeg", "name": "فول سوداني مملح" },
+      { "id": 2, "src": "/peans/peans2.jpeg", "name": "فول سوداني محمص" },
       { "id": 3, "src": "/peans/peans3.png", "name": "Roasted Peanuts" },
       { "id": 4, "src": "/peans/peans4.png", "name": "Roasted Peanuts" },
       { "id": 5, "src": "/peans/peans5.png", "name": "Roasted Peanuts" },

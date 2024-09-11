@@ -72,8 +72,8 @@
   "contactUs": {
     "title": "اتصل بنا",
     "description": "إذا كان لديك أي استفسارات أو تحتاج إلى دعم، لا تتردد في الاتصال بنا. نحن هنا لمساعدتك وتلبية جميع احتياجاتك.",
-    "phone": "+012 345 67890",
-    "email": "info@example.com",
+    "phone": "963 989557805",
+    "email": "shazaalshamcompany@gmail.com",
     "address": "عنوان المكتب",
     "address1": "حلبوني, دمشق, الجمهورية العربية السورية ",
     "followUs": "تابعنا",
@@ -90,9 +90,9 @@
     "usefulLinks": "روابط مفيدة",
     "contact": "تواصل",
     "address": "حلبوني, دمشق, الجمهورية العربية السورية ",
-    "email": "info@example.com",
+    "email": "shazaalshamcompany@gmail.com",
     "phone": "+963 989557805",
-    "fax": "+963 2232014",
+    "fax": "+963 112232014",
     "socialMedia": "وسائل التواصل الاجتماعي",
     "footerNote": "© 2023 Copyright: Shaza Alsham"
   },
@@ -198,8 +198,8 @@
       { "id": 5, "src": "/olive/olive5.png", "name": "زيتون أسود" }
     ],
     "peanuts": [
-      { "id": 1, "src": "/peans/peans1.png", "name": "فول سوداني مملح" },
-      { "id": 2, "src": "/peans/peans2.png", "name": "فول سوداني محمص" },
+      { "id": 1, "src": "/peans/peans1.jpeg", "name": "فول سوداني مملح" },
+      { "id": 2, "src": "/peans/peans2.jpeg", "name": "فول سوداني محمص" },
       { "id": 3, "src": "/peans/peans3.png", "name": "فول سوداني محمص" },
       { "id": 4, "src": "/peans/peans4.png", "name": "فول سوداني محمص" },
       { "id": 5, "src": "/peans/peans5.png", "name": "فول سوداني محمص" },
