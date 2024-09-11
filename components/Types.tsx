@@ -18,8 +18,8 @@ function Types() {
     <div className="container mx-auto py-20" id="products">
       <div className="w-full">
         <div className="flex flex-wrap gap-5 items-end">
-          <div className="lg:w-1/2 w-full">
-            <div className="max-w-xl mb-10" data-wow-delay="0.1s">
+          <div className=" w-full">
+            <div className="w-full  mb-10" data-wow-delay="0.1s" dir={pathName.split("/")[1] == "ar"?"rtl":"ltr"}>
               <h1 className="text-4xl font-bold mb-4 dark:text-white">{messages.types.header}</h1>
               <p className="text-gray-600 dark:text-white text-xl">
                 {messages.types.description}
