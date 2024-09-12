@@ -39,27 +39,27 @@ const ContactUs = () => {
               {contactMessages.title}
             </h5>
             <p className="mb-4">
-              <FaPhoneAlt className="inline-block mr-3" />
+              <FaPhoneAlt className="inline-block mr-3 ml-3" />
               {contactMessages.phone}
             </p>
             <h5 className="text-xl font-semibold mb-2 dark:text-white">
               {contactMessages.emailLabel}
             </h5>
             <p className="mb-4">
-              <FaEnvelope className="inline-block mr-3" />
+              <FaEnvelope className="inline-block mr-3 ml-3" />
               {contactMessages.email}
             </p>
             <h5 className="text-xl font-semibold mb-2 dark:text-white">
               {contactMessages.address}
             </h5>
             <p className="mb-4">
-              <FaMapMarkerAlt className="inline-block mr-3" />
+              <FaMapMarkerAlt className="inline-block mr-3" ml-3 />
               {contactMessages.address1}
             </p>
             <h5 className="text-xl font-semibold mb-2 dark:text-white">
               {contactMessages.followUs}
             </h5>
-            <div className="flex space-x-2 mt-2">
+            <div className="flex space-x-2 mt-2 ">
               <SocilaMedia />
             </div>
           </div>
