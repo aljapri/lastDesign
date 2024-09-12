@@ -18,13 +18,13 @@
   "phone": "هاتف",
   "slides": [
     {
-      "img": "/img1.jpg",
+      "img": "/img6.jpeg",
       "title": "منتجات طازجة",
       "description": "نحن نقدم مجموعة متنوعة من المنتجات الطازجة والعالية الجودة لضمان تلبية احتياجات عائلتك الغذائية.",
       "location": "القسم الأول"
     },
     {
-      "img": "/img2.jpg",
+      "img": "/img7.jpeg",
       "title": "زيتون عالي الجودة",
       "description": "نقدم أفضل أنواع الزيتون، سواءً كان زيتون أخضر أو أسود، طازج ومغذٍ ومناسب لجميع استخداماتك.",
       "location": "قسم الزيتون"
@@ -53,16 +53,16 @@
     "paragraph": "في كل خطوة نأخذها نحو المستقبل، نضع الجودة في مقدمة أولوياتنا. معًا، نعمل بشغف لضمان تقديم أفضل المواد الغذائية لعملائنا، حيث نعتبر كل شراكة نؤسسها مع عملائنا جزءًا من قصتنا المستمرة في تقديم الأفضل.",
     "info": [
       {
-        "number": "10+",
-        "title": "سنوات من الخبرة"
+        "number": 10,
+        "title": "Years of Experience"
       },
       {
-        "number": "20+",
-        "title": "منتجات"
+        "number": 20,
+        "title": "Products"
       },
       {
-        "number": "52+",
-        "title": "عملاء"
+        "number": 52,
+        "title": "Clients"
       }
     ]
   },
@@ -104,25 +104,25 @@
         "id": 1,
         "label": "المربيات",
         "link": "jams",
-        "image": "/jam.jpg"
+        "image": "/jam1.jpg"
       },
       {
         "id": 2,
         "label": "الزيتون والمحشيات",
         "link": "olives",
-        "image": "/olive.jpg"
+        "image": "/olive1.jpg"
       },
       {
         "id": 3,
         "label": "المخللات",
         "link": "pinks",
-        "image": "/pickle.jpg"
+        "image": "/pickle1.jpg"
       },
       {
         "id": 4,
         "label": "المعلبات",
         "link": "peans",
-        "image": "/peans.jpg"
+        "image": "/peans1.jpg"
       }
     ]
   },

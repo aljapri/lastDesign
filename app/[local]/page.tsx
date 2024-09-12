@@ -9,10 +9,13 @@ import WhatsApp from "@/components/shared/WhatsApp";
 import SlideBar from "@/components/SlideBar";
 import Types from "@/components/Types";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
 export default function Home() {
+  const pathName = usePathname();
+
     const [isPageLoaded, setIsPageLoaded] = useState(false);
     useEffect(() => {
       // Check if the page was fully reloaded

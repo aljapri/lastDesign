@@ -4,6 +4,8 @@ import { usePathname, useRouter } from "next/navigation";
 import enMessages from "@/messages/en.json";
 import arMessages from "@/messages/ar.json";
 import SocilaMedia from "./shared/SocilaMedia";
+import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
   const router = useRouter();
@@ -18,16 +20,19 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-zinc-50 dark:bg-dark dark:text-white text-center text-surface/75 lg:text-left border-t-2 mt-2">
-      <div className="mx-6 py-10 text-center md:text-left">
+    <footer   className="bg-zinc-50 dark:bg-dark  dark:text-white text-center text-surface/75 lg:text-left  mt-2">
+      <div className="mx-6 py-10 text-center md:text-left" dir={pathName.split("/")[1] == "ar"?"rtl":"ltr"}>
         <div className="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="">
-            <h1 className="font-bold text-primary mb-4 text-3xl logoFont">
-              Shaza<span className="text-secondary">Alsham</span>
-            </h1>
-            <p>
-              شذا الشام هي شركة متخصصة في تقديم أجود المواد الغذائية المحلية،
-              ملتزمون بتوفير منتجات عالية الجودة تلبّي احتياجات عملائنا.
+          <Link
+          href={"/"}
+          className="text-2xl font-bold text-gray-900 dark:text-white  "
+        >
+          <Image src={"/logo.png"} width={100} className="sm:w-[100px] w-[50px]" height={70} alt="logo" />
+
+        </Link>
+            <p className={`${pathName.split("/")[1] == "ar" && "text-right"}`}>
+              {footerMessages.companyDescription}
             </p>
           </div>
 
@@ -35,6 +40,7 @@ const Footer = () => {
             <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
               {footerMessages.usefulLinks}
             </h6>
+            <ul className={`${pathName.split("/")[1] == "ar" && "text-right"}`}>
             {messages.menus.map((menu, index) => (
               <li
                 key={menu.link}
@@ -44,6 +50,7 @@ const Footer = () => {
                 {menu.name}
               </li>
             ))}
+            </ul>
           </div>
 
           <div>
@@ -119,7 +126,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="bg-black/5 p-6 text-center flex flex-row justify-center items-center">
+      <div className="bg-black/5 p-6 text-center flex flex-row justify-center items-center dark:border-t-2">
         <span>© 2023 Copyright:</span>
         <p className="font-semibold " >
           Shaza Alsham

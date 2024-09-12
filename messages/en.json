@@ -18,34 +18,34 @@
   "phone": "Phone",
   "slides": [
     {
-      "img": "/img1.jpg",
-      "title": "Fresh Products",
-      "description": "We offer a variety of fresh and high-quality products to meet your family's food needs.",
-      "location": "Section One"
+      "img": "/img6.jpeg",
+      "title": "منتجات طازجة",
+      "description": "نحن نقدم مجموعة متنوعة من المنتجات الطازجة والعالية الجودة لضمان تلبية احتياجات عائلتك الغذائية.",
+      "location": "القسم الأول"
     },
     {
-      "img": "/img2.jpg",
-      "title": "High-Quality Olives",
-      "description": "We offer the best types of olives, whether green or black, fresh, nutritious, and suitable for all your uses.",
-      "location": "Olives Section"
+      "img": "/img7.jpeg",
+      "title": "زيتون عالي الجودة",
+      "description": "نقدم أفضل أنواع الزيتون، سواءً كان زيتون أخضر أو أسود، طازج ومغذٍ ومناسب لجميع استخداماتك.",
+      "location": "قسم الزيتون"
     },
     {
       "img": "/img5.jpg",
-      "title": "Fresh Vegetables",
-      "description": "We have the best fresh and nutritious vegetables, straight from the farm to your table.",
-      "location": "Vegetables Section"
+      "title": "خضروات طازجة",
+      "description": "تجد لدينا أفضل أنواع الخضروات الطازجة والمغذية، مباشرة من المزارع إلى طاولتك.",
+      "location": "قسم الخضروات"
     },
     {
       "img": "/img3.jpg",
-      "title": "Fresh Fruits",
-      "description": "Enjoy the most delicious and varied fresh fruits for better health.",
-      "location": "Fruits Section"
+      "title": "فواكه طازجة",
+      "description": "استمتع بأشهى وألذ الفواكه الطازجة المتنوعة لصحة أفضل.",
+      "location": "قسم الفواكه"
     },
     {
       "img": "/img4.jpg",
-      "title": "Organic Products",
-      "description": "We provide you with healthy organic food options to ensure complete nutrition for your family.",
-      "location": "Section Four"
+      "title": "منتجات عضوية",
+      "description": "نوفر لكم خيارات غذائية عضوية صحية تضمن تغذية متكاملة لعائلتك.",
+      "location": "القسم الرابع"
     }
   ],
   "aboutSection": {
@@ -53,15 +53,15 @@
    "paragraph": "In every step we take towards the future, we place quality at the forefront of our priorities. Together, we work passionately to ensure we deliver the best food products to our customers, with every partnership we establish becoming a part of our ongoing story of delivering excellence.",
     "info": [
       {
-        "number": "10+",
+        "number": 10,
         "title": "Years of Experience"
       },
       {
-        "number": "20+",
+        "number": 20,
         "title": "Products"
       },
       {
-        "number": "52+",
+        "number": 52,
         "title": "Clients"
       }
     ]
@@ -99,27 +99,27 @@
     "items": [
       {
         "id": 1,
-        "label": "Jams",
+        "label": "المربيات",
         "link": "jams",
-        "image": "/jam.jpg"
+        "image": "/jam1.jpg"
       },
       {
         "id": 2,
-        "label": "Olives and Stuffed",
+        "label": "الزيتون والمحشيات",
         "link": "olives",
-        "image": "/olive.jpg"
+        "image": "/olive1.jpg"
       },
       {
         "id": 3,
-        "label": "Pickles",
+        "label": "المخللات",
         "link": "pinks",
-        "image": "/pickle.jpg"
+        "image": "/pickle1.jpg"
       },
       {
         "id": 4,
-        "label": "Canned Goods",
+        "label": "المعلبات",
         "link": "peans",
-        "image": "/peans.jpg"
+        "image": "/peans1.jpg"
       }
     ]
   },

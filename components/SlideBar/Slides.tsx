@@ -7,7 +7,7 @@ type Props = {
 
 function Slides({ data }: Props) {
   return (
-    <div className=" flex w-full gap-6">
+    <div className=" flex w-full gap-6  absolute sm:left-[50%] ">
       {data.map((data) => {
         return <SliderCard key={data.img} data={data} />;
       })}

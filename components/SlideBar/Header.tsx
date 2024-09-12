@@ -38,17 +38,12 @@ export default function Header() {
           className="text-2xl font-bold text-gray-900 dark:text-white flex flex-row justify-center items-center "
         >
           <Image src={"/logo.png"} width={100} className="sm:w-[100px] w-[50px]" height={70} alt="logo" />
-          <span className="text-green-800 logoFont sm:text-2xl text-xl">
-            {messages.logo_name.first}
-          </span>{" "}
-          <span className="text-orange-800 logoFont  sm:text-2xl text-xl">
-            {messages.logo_name.second}
-          </span>
+
         </Link>
 
         {/* Menu */}
-        <nav>
-          <ul className="hidden xl:flex space-x-6">
+        <nav  dir={`${pathName.split("/")[1] == 'ar' ? "ltr" : "rtl"}`}>
+          <ul className="hidden xl:flex gap-x-5">
             {messages.menus.map((menu, index) => (
               <li
                 key={menu.link}

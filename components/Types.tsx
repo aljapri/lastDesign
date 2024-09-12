@@ -14,6 +14,8 @@ function Types() {
   const messages = currentLanguage === "ar" ? arMessages : enMessages; // Select the appropriate messages
   const products = messages.types.items;
 
+
+  console.log(products);
   return (
     <div className="container mx-auto py-20" id="products">
       <div className="w-full">
@@ -33,6 +35,7 @@ function Types() {
             <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 px-3">
               {products.map((el, index) => {
                 return (
+                  
                   <motion.div
                     key={el.id}
                     className="wow fadeInUp cursor-pointer"

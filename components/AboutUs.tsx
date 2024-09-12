@@ -6,6 +6,7 @@ import { SectionWrapper } from "@/hoc";
 import enMessages from '@/messages/en.json';
 import arMessages from '@/messages/ar.json';
 import { usePathname } from "next/navigation";
+import Increase from "./shared/Increase";
 
 const AboutSection = () => {
   const pathName = usePathname();
@@ -53,11 +54,11 @@ const AboutSection = () => {
 
               <div className="w-full lg:justify-start justify-center items-center sm:gap-10 gap-5 inline-flex space-x-5 dark:text-white">
                 {aboutSectionInfo.map(({ number, title }, index) => (
-                  <AboutSectionMenu
+                  <Increase
                     key={index}
                     index={index}
                     title={title}
-                    number={number}
+                    target={number}
                     Icon={aboutUsInformation[index].Icon}
                   />
                 ))}

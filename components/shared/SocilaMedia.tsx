@@ -5,7 +5,7 @@ import { FaWhatsapp } from 'react-icons/fa'
 
 export default function SocilaMedia() {
   return (
-    <div className='flex space-x-4'>
+    <div className='flex gap-x-4'>
         <p className="mb-4 text-3xl">
           <Link href={""}><CiFacebook />
           </Link>
