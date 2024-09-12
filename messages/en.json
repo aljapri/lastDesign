@@ -19,33 +19,33 @@
   "slides": [
     {
       "img": "/img6.jpeg",
-      "title": "منتجات طازجة",
-      "description": "نحن نقدم مجموعة متنوعة من المنتجات الطازجة والعالية الجودة لضمان تلبية احتياجات عائلتك الغذائية.",
-      "location": "القسم الأول"
+      "title": "Fresh Products",
+      "description": "We offer a variety of fresh and high-quality products to ensure your family's nutritional needs are met.",
+      "location": "Section One"
     },
     {
       "img": "/img7.jpeg",
-      "title": "زيتون عالي الجودة",
-      "description": "نقدم أفضل أنواع الزيتون، سواءً كان زيتون أخضر أو أسود، طازج ومغذٍ ومناسب لجميع استخداماتك.",
-      "location": "قسم الزيتون"
+      "title": "High-Quality Olives",
+      "description": "We provide the best types of olives, whether green or black, fresh, nutritious, and suitable for all your uses.",
+      "location": "Olive Section"
     },
     {
       "img": "/img5.jpg",
-      "title": "خضروات طازجة",
-      "description": "تجد لدينا أفضل أنواع الخضروات الطازجة والمغذية، مباشرة من المزارع إلى طاولتك.",
-      "location": "قسم الخضروات"
+      "title": "Fresh Vegetables",
+      "description": "Find the best types of fresh and nutritious vegetables, straight from the farm to your table.",
+      "location": "Vegetable Section"
     },
     {
       "img": "/img3.jpg",
-      "title": "فواكه طازجة",
-      "description": "استمتع بأشهى وألذ الفواكه الطازجة المتنوعة لصحة أفضل.",
-      "location": "قسم الفواكه"
+      "title": "Fresh Fruits",
+      "description": "Enjoy a variety of the most delicious and fresh fruits for better health.",
+      "location": "Fruit Section"
     },
     {
       "img": "/img4.jpg",
-      "title": "منتجات عضوية",
-      "description": "نوفر لكم خيارات غذائية عضوية صحية تضمن تغذية متكاملة لعائلتك.",
-      "location": "القسم الرابع"
+      "title": "Organic Products",
+      "description": "We provide you with healthy organic food options that ensure complete nutrition for your family.",
+      "location": "Section Four"
     }
   ],
   "aboutSection": {
@@ -70,7 +70,7 @@
     "title": "Contact Us",
     "description": "If you have any questions or need support, feel free to contact us. We are here to help you and meet all your needs.",
     "phone": "+963 989557805 ",
-    "email": "shazaalshamcompany@gmail.com",
+    "email": "Info@shazaalsham.com",
     "address":"Office address",
     "address1": "Halbouni, Damascus, Syrian Arab Republic",
     "followUs": "Follow Us",
@@ -87,7 +87,7 @@
     "usefulLinks": "Useful links",
     "contact": "Contact",
     "address": "Halbouni, Damascus, Syrian Arab Republic",
-    "email": "shazaalshamcompany@gmail.com",
+    "email": "Info@shazaalsham.com",
     "phone": "+963 989557805",
     "fax": "+963 112232014",
     "socialMedia": "Social Media",

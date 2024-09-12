@@ -40,6 +40,17 @@ export default function SlideBar() {
     data: initData,
     index: 0,
   });
+  console.log(data);
+
+  const handleCardClick = (cardData:any) => {
+    setCurrentSlideData({
+      data: cardData,
+      index: sliderData.findIndex((ele) => ele.img === cardData.img),
+    });
+    setTransitionData(cardData);
+    const newArr = sliderData.filter((ele) => ele.img != cardData.img);
+    setData(newArr);
+  };
 
   // useEffect logic (optional, as commented in the original code)
 
@@ -66,7 +77,7 @@ export default function SlideBar() {
               />
             </div>
             <div className="col-span-6 flex h-full flex-1 flex-col justify-start p-4 md:justify-center md:p-10">
-              <Slides data={data} />
+              <Slides data={data} handleCardClick={handleCardClick}    />
               <Controls
                 currentSlideData={currentSlideData}
                 data={data}

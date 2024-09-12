@@ -59,7 +59,7 @@ function Controls({
     // Automatically move to the next slide every 3 seconds
     const interval = setInterval(() => {
       handleNext();
-    }, 2000);
+    }, 3000);
 
     // Clear the interval when the component unmounts
     return () => clearInterval(interval);
