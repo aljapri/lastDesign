@@ -22,10 +22,10 @@ export default function Layout({
     }
   return (
     <>
-      <div className=' dark:bg-darkBackground'>
+      <div className=' dark:bg-darkBackground' dir={`${pathName.split("/")[1] == 'ar' ? "rtl" : "ltr"}`}>
                 <Header/>
         <div className='mb-10 w-full h-10'></div>
-            <div dir={`${pathName.split("/")[1] == 'ar' ? "rtl" : "ltr"}`}>
+            <div >
             {children}
             </div>
             <DarkModeToggle/>
