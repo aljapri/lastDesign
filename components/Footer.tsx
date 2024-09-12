@@ -26,12 +26,12 @@ const Footer = () => {
           <div className="">
           <Link
           href={"/"}
-          className="text-2xl font-bold text-gray-900 dark:text-white  "
+          className="text-2xl font-bold text-gray-900 dark:text-white w-full flex flex-row justify-center md:justify-normal "
         >
-          <Image src={"/logo.png"} width={100} className="sm:w-[100px] w-[50px]" height={70} alt="logo" />
+          <Image src={"/logo.png"} width={100} className="sm:w-[100px] mb-5 " height={70} alt="logo" />
 
         </Link>
-            <p className={`${pathName.split("/")[1] == "ar" && "text-right"}`}>
+            <p className={`${pathName.split("/")[1] == "ar" && "text-right"} `}>
               {footerMessages.companyDescription}
             </p>
           </div>
@@ -40,7 +40,7 @@ const Footer = () => {
             <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
               {footerMessages.usefulLinks}
             </h6>
-            <ul className={`${pathName.split("/")[1] == "ar" && "text-right"}`}>
+            <ul className={`${pathName.split("/")[1] == "ar" && "text-right"} flex flex-col justify-center items-center sm:flex sm:flex-col sm:justify-normal sm:items-start`}>
             {messages.menus.map((menu, index) => (
               <li
                 key={menu.link}

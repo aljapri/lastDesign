@@ -37,7 +37,7 @@ export default function Header() {
           href={"/"}
           className="text-2xl font-bold text-gray-900 dark:text-white flex flex-row justify-center items-center "
         >
-          <Image src={"/logo.png"} width={100} className="sm:w-[100px] w-[50px]" height={70} alt="logo" />
+          <Image src={"/logo.png"} width={100} className="" height={70} alt="logo" />
 
         </Link>
 
@@ -57,7 +57,7 @@ export default function Header() {
         </nav>
 
         {/* Language Selector */}
-        <div className="relative flex flex-row justify-center items-center space-x-2 sm:text-xl text-sm ">
+        <div className="relative flex flex-row justify-center items-center gap-x-2 sm:text-xl text-sm ">
         <MdOutlineLanguage size={25} className="dark:text-white text-dark"/>
           <select
             title="language"

@@ -26,7 +26,7 @@ export default function Home() {
       return <div className="w-full flex flex-row justify-center items-center h-screen">Loading...</div>; // Optional loading indicator
     }
   return (
-<div className="dark:bg-darkBackground " >
+<div className="dark:bg-darkBackground " dir={pathName.split("/")[1] == "ar"?"rtl":"ltr"} >
 <SlideBar/>
     <AboutUs/>
     <Types/>

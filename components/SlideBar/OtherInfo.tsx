@@ -17,13 +17,13 @@ const item = {
 
 function OtherInfo({ data }: Props) {
   return (
-    <motion.div initial="hidden" animate={"visible"} className=" flex flex-col">
+    <motion.div initial="hidden" animate={"visible"} className=" flex flex-col ">
       <AnimatedText
-        className=" my-1 text-4xl font-semibold md:my-3 md:text-8xl md:leading-[100px]"
+        className=" my-1 text-4xl font-semibold md:my-3 md:text-8xl md:leading-[100px] pl-6 pr-6"
         data={data?.title}
       />
       <AnimatedText
-        className=" text-[#D5D5D6] text-2xl"
+        className=" text-[#D5D5D6] text-2xl pl-6 pr-6"
         data={data?.description}
       />
     </motion.div>

@@ -9,7 +9,7 @@ type Props = {
 function Slides({ data,handleCardClick }: Props) {
 
   return (
-    <div className=" flex w-full gap-6  absolute sm:left-[50%] ">
+    <div className=" flex w-full gap-6    ">
       {data.map((data) => {
         return <SliderCard key={data.img} data={data} handleCardClick={handleCardClick}  />;
       })}

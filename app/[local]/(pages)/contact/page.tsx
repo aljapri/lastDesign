@@ -15,7 +15,6 @@ export default function Page() {
 
   return (
 <div className="  py-12 flex flex-col md:px-28 dark:text-white  " 
-    dir='ltr'
     >
         <Head>
         <title>{contactMessages.title} | شذا الشام</title>
@@ -34,7 +33,7 @@ export default function Page() {
             <h5 className="text-xl font-semibold mb-2 dark:text-white">
               {contactMessages.title}
             </h5>
-            <p className="mb-4">
+            <p className="mb-4 ">
               <FaPhoneAlt className="inline-block mr-3" />
               {contactMessages.phone}
             </p>
@@ -48,7 +47,7 @@ export default function Page() {
             <h5 className="text-xl font-semibold mb-2 dark:text-white">
               {contactMessages.address}
             </h5>
-            <p className="mb-4">
+            <p className="mb-4 ">
               <FaMapMarkerAlt className="inline-block mr-3" />
               {contactMessages.address1}
             </p>
