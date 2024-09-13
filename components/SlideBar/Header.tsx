@@ -8,6 +8,7 @@ import enMessages from "@/messages/en.json";
 import arMessages from "@/messages/ar.json";
 import Link from "next/link";
 import { MdOutlineLanguage } from "react-icons/md";
+import Logo from "../shared/Logo";
 
 export default function Header() {
   const router = useRouter();
@@ -33,13 +34,7 @@ export default function Header() {
     <header className="bg-white dark:bg-darkBackground shadow-md">
       <div className="container mx-auto flex justify-between items-center p-4">
         {/* Logo */}
-        <Link
-          href={"/"}
-          className="text-2xl font-bold text-gray-900 dark:text-white flex flex-row justify-center items-center "
-        >
-          <Image src={"/logo.png"} width={100} className="" height={70} alt="logo" />
-
-        </Link>
+        <Logo/>
 
         {/* Menu */}
         <nav  dir={`${pathName.split("/")[1] == 'ar' ? "ltr" : "rtl"}`}>

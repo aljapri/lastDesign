@@ -6,6 +6,7 @@ import arMessages from "@/messages/ar.json";
 import SocilaMedia from "./shared/SocilaMedia";
 import Link from "next/link";
 import Image from "next/image";
+import Logo from "./shared/Logo";
 
 const Footer = () => {
   const router = useRouter();
@@ -24,13 +25,7 @@ const Footer = () => {
       <div className="mx-6 py-10 text-center md:text-left" dir={pathName.split("/")[1] == "ar"?"rtl":"ltr"}>
         <div className="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="">
-          <Link
-          href={"/"}
-          className="text-2xl font-bold text-gray-900 dark:text-white w-full flex flex-row justify-center md:justify-normal "
-        >
-          <Image src={"/logo.png"} width={100} className="sm:w-[100px] mb-5 " height={70} alt="logo" />
-
-        </Link>
+          <Logo/>
             <p className={`${pathName.split("/")[1] == "ar" && "text-right"} `}>
               {footerMessages.companyDescription}
             </p>

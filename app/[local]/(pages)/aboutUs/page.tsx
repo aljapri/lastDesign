@@ -16,11 +16,13 @@ export default function About() {
         <title>{messages.about.title}</title>
       </Head>
       <div className="container mx-auto px-10 ">
-        <h1 className="text-4xl font-bold text-center dark:text-white text-green-700 mb-10 w-full flex flex-row justify-center items-center dark:opacity-50">
-          <Image src={"/logo.png"} alt='shaza alsham' width={300} height={200} />
-        </h1>
+        <div className="text-4xl font-bold text-center bg-primary opacity-70 dark:text-white text-green-700 mb-10 w-full flex flex-row justify-center items-center ">
+          <div>
+          <Image src={"/logo.png"} alt='shaza alsham' width={300} height={200}  />
+          </div>
+        </div>
 
-        <section className=" ">
+        <section className="mb-8 ">
           <h2 className="text-3xl font-semibold dark:text-white text-green-600 mb-4">{messages.about.sections.whoWeAre.title}</h2>
           <p className="text-gray-700 dark:text-white leading-relaxed">
             {messages.about.sections.whoWeAre.content}

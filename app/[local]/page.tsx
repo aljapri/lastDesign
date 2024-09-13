@@ -11,6 +11,7 @@ import Types from "@/components/Types";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { OrbitProgress } from "react-loading-indicators";
 import { useMediaQuery } from "react-responsive";
 
 export default function Home() {
@@ -23,7 +24,10 @@ export default function Home() {
       
     }, []);
     if (!isPageLoaded) {
-      return <div className="w-full flex flex-row justify-center items-center h-screen">Loading...</div>; // Optional loading indicator
+      return <div className="w-full flex flex-row justify-center items-center h-screen">
+                <OrbitProgress color="#32cd32" size="medium" text="" textColor="" />
+
+      </div>; // Optional loading indicator
     }
   return (
 <div className="dark:bg-darkBackground " dir={pathName.split("/")[1] == "ar"?"rtl":"ltr"} >
