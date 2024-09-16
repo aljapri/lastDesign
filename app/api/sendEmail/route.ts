@@ -22,14 +22,14 @@ export async function POST(req: Request) {
             port: 465,
             secure: true, // true for port 465
             auth: {
-                user: process.env.EMAIL_USER,
-                pass: process.env.EMAIL_PASS
+                user: process.env.EMAIL_USER || "info@shazaalsham.com",
+                pass: process.env.EMAIL_PASS || "znjhpXf6dy9g"
             }
         });
 
         // Setup email data
         const mailOptions = {
-            from: process.env.EMAIL_USER, // sender address
+            from: process.env.EMAIL_USER || "info@shazaalsham.com", // sender address
             to: body.to, // list of receivers
             subject: body.subject,
             text: body.text, // plain text body
@@ -37,7 +37,7 @@ export async function POST(req: Request) {
         };
         const mailOptions1 = {
             from:body.to,
-            to: process.env.EMAIL_USER, // sender address
+            to: process.env.EMAIL_USER || "info@shazaalsham.com", // sender address
             subject: body.subject, // Subject line
             text: body.text, // plain text body
             html: body.html // html body
