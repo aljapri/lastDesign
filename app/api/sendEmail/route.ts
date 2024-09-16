@@ -23,7 +23,7 @@ export async function POST(req: Request) {
             secure: true, // true for port 465
             auth: {
                 user: process.env.EMAIL_USER || "info@shazaalsham.com",
-                pass: process.env.EMAIL_PASS || "znjhpXf6dy9g"
+                pass: process.env.EMAIL_PASS || "znjhpXf6dy9g@FN"
             }
         });
 
