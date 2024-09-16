@@ -68,7 +68,7 @@ export default function Header() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden ml-4 text-gray-900 dark:text-white"
+          className="xl:hidden ml-4 text-gray-900 dark:text-white"
           title={messages.phone}
         >
           <TfiAlignJustify

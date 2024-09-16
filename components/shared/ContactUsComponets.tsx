@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SocilaMedia from "./SocilaMedia";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { SectionWrapper } from "@/hoc";
@@ -9,11 +9,88 @@ import { usePathname } from "next/navigation";
 import enMessages from "@/messages/en.json";
 import arMessages from "@/messages/ar.json";
 
-const ContactUsComponets = () => {
+const ContactUsComponents = () => {
   const pathName = usePathname();
   const currentLanguage = pathName.split("/")[1] === "ar" ? "ar" : "en";
   const messages = currentLanguage === "ar" ? arMessages : enMessages;
   const contactMessages = messages.contactUs;
+
+  const [purchase, setPurchase] = useState(false);
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    product: "",
+    quantity: "",
+    country: "",
+    city: "",
+    clientAddress: "",
+    message: "",
+  });
+
+  const handlePurches = (value: string) => {
+    if (value === "Purchase" || value === "شراء") {
+      setPurchase(true);
+    } else {
+      setPurchase(false);
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({ ...prev, [id]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log(formData);
+    try {
+      const response = await fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          to: formData.email, // or dynamically set this
+          subject: formData.subject,
+          text: formData.message,
+
+          html: `<p>Name: ${formData.name}</p><p>Email: ${formData.email}</p><p>Message: ${formData.message}</p> 
+          ${purchase && 
+            `<p>product: ${formData.product}</p>
+            <p>quantity: ${formData.quantity}</p>
+            <p>country: ${formData.country}</p>
+            <p>city: ${formData.city}</p>
+            <p>Address: ${formData.clientAddress}</p>
+            
+            `}`,
+        }),
+      });
+
+      if (response.ok) {
+        alert('Email sent successfully');
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          product: "",
+          quantity: "",
+          country: "",
+          city: "",
+          clientAddress: "",
+          message: "",
+        });
+      } else {
+        const result = await response.json();
+        alert(`Failed to send email: ${result.error}`);
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      alert('Error sending email');
+    }
+  };
 
   return (
     <motion.div
@@ -68,7 +145,7 @@ const ContactUsComponets = () => {
               className="mb-4 text-gray-700 dark:text-white"
               dangerouslySetInnerHTML={{ __html: contactMessages.contactForm }}
             />
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 gap-4">
                 <div className="flex flex-col">
                   <label
@@ -80,6 +157,8 @@ const ContactUsComponets = () => {
                   <input
                     type="text"
                     id="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     className="border border-gray-300 p-3 rounded-md dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder={contactMessages.name}
                   />
@@ -94,6 +173,8 @@ const ContactUsComponets = () => {
                   <input
                     type="email"
                     id="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     className="border border-gray-300 p-3 rounded-md dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder={contactMessages.emailLabel}
                   />
@@ -106,18 +187,109 @@ const ContactUsComponets = () => {
                     {contactMessages.subject}
                   </label>
                   <select
-                    title="subject"
-                    id="countries"
+                    id="subject"
+                    value={formData.subject}
+                    onChange={(e) => {
+                      handleChange(e);
+                      handlePurches(e.target.value);
+                    }}
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   >
-                    {pathName.split("/")[1] === "ar" ? <option selected key={"choose"}>اختر الموضوع</option> : <option selected key={"choose"}>Choose the subject</option>  }
-                    {contactMessages.subjects.map((sub:string)=>{
-                      return(
-                        <option key={sub} value={sub}>{sub}</option>
-                      )
-                    })}
+                    {pathName.split("/")[1] === "ar" ? (
+                      <option value="">اختر الموضوع</option>
+                    ) : (
+                      <option value="">Choose the subject</option>
+                    )}
+                    {contactMessages.subjects.map((sub: string) => (
+                      <option key={sub} value={sub}>
+                        {sub}
+                      </option>
+                    ))}
                   </select>
-                  {/* <input type="text" id="subject" className="border border-gray-300 p-3 rounded-md" placeholder={contactMessages.subject} /> */}
+                  {purchase && (
+                    <>
+                      <label
+                        htmlFor="product"
+                        className="text-gray-700 dark:text-white mt-5"
+                      >
+                        {contactMessages.product}
+                      </label>
+                      <select
+                        id="product"
+                        value={formData.product}
+                        onChange={handleChange}
+                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      >
+                        {pathName.split("/")[1] === "ar" ? (
+                          <option value="">اختر المنتج</option>
+                        ) : (
+                          <option value="">Choose the product</option>
+                        )}
+                        {contactMessages.pruchaseProducts.map((sub: string) => (
+                          <option key={sub} value={sub}>
+                            {sub}
+                          </option>
+                        ))}
+                      </select>
+                      <div className="flex flex-col">
+                        <label
+                          htmlFor="quantity"
+                          className="text-gray-700 dark:text-white"
+                        >
+                          {contactMessages.quantity}
+                        </label>
+                        <input
+                          type="number"
+                          id="quantity"
+                          value={formData.quantity}
+                          onChange={handleChange}
+                          className="border border-gray-300 p-3 rounded-md dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        />
+                      </div>
+                      <div className="flex flex-col">
+                        <label
+                          htmlFor="country"
+                          className="text-gray-700 dark:text-white"
+                        >
+                          {contactMessages.country}
+                        </label>
+                        <input
+                          id="country"
+                          value={formData.country}
+                          onChange={handleChange}
+                          className="border border-gray-300 p-3 rounded-md dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        />
+                      </div>
+                      <div className="flex flex-col">
+                        <label
+                          htmlFor="city"
+                          className="text-gray-700 dark:text-white"
+                        >
+                          {contactMessages.city}
+                        </label>
+                        <input
+                          id="city"
+                          value={formData.city}
+                          onChange={handleChange}
+                          className="border border-gray-300 p-3 rounded-md dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        />
+                      </div>
+                      <div className="flex flex-col">
+                        <label
+                          htmlFor="clientAddress"
+                          className="text-gray-700 dark:text-white"
+                        >
+                          {contactMessages.clientAddress}
+                        </label>
+                        <input
+                          id="clientAddress"
+                          value={formData.clientAddress}
+                          onChange={handleChange}
+                          className="border border-gray-300 p-3 rounded-md dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        />
+                      </div>
+                    </>
+                  )}
                 </div>
                 <div className="flex flex-col">
                   <label
@@ -128,6 +300,8 @@ const ContactUsComponets = () => {
                   </label>
                   <textarea
                     id="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     className="border border-gray-300 p-3 rounded-md dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder={contactMessages.message}
                     rows={8}
@@ -148,4 +322,4 @@ const ContactUsComponets = () => {
   );
 };
 
-export default ContactUsComponets;
+export default ContactUsComponents;
