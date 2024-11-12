@@ -13,6 +13,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { OrbitProgress } from "react-loading-indicators";
 import { useMediaQuery } from "react-responsive";
+import Header from '@/components/SlideBar/Header';
 
 export default function Home() {
   const pathName = usePathname();
@@ -32,6 +33,7 @@ export default function Home() {
   return (
 <div className="dark:bg-darkBackground " dir={pathName.split("/")[1] == "ar"?"rtl":"ltr"} >
 {/* <SlideBar/> */}
+  <Header/>
     <AboutUs/>
     <Types/>
     <ContactUs/>
