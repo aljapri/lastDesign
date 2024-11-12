@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import Location from "@/components/Location";
 import DarkModeToggle from "@/components/shared/DarkModeToggle";
 import WhatsApp from "@/components/shared/WhatsApp";
-import SlideBar from "@/components/SlideBar";
+// import SlideBar from "@/components/SlideBar";
 import Types from "@/components/Types";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -31,7 +31,7 @@ export default function Home() {
     }
   return (
 <div className="dark:bg-darkBackground " dir={pathName.split("/")[1] == "ar"?"rtl":"ltr"} >
-<SlideBar/>
+{/* <SlideBar/> */}
     <AboutUs/>
     <Types/>
     <ContactUs/>
