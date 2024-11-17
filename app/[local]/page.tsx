@@ -1,5 +1,5 @@
 "use client";
-
+import Popup from "@/components/Card";
 import AboutUs from "@/components/AboutUs";
 import ContactUs from "@/components/ContactUs";
 import Footer from "@/components/Footer";
@@ -33,6 +33,7 @@ export default function Home() {
   return (
 <div className="dark:bg-darkBackground " dir={pathName.split("/")[1] == "ar"?"rtl":"ltr"} >
 {/* <SlideBar/> */}
+  <Popup/>
   <Header/>
     <AboutUs/>
     <Types/>
