@@ -1,5 +1,6 @@
 "use client"
 import Footer from '@/components/Footer';
+import Popup from "@/componenets/Card";
 import DarkModeToggle from '@/components/shared/DarkModeToggle';
 import WhatsApp from '@/components/shared/WhatsApp';
 import Header from '@/components/SlideBar/Header';
@@ -25,6 +26,8 @@ export default function Layout({
     }
   return (
     <>
+      <div>
+            <Popup />
       <div className=' dark:bg-darkBackground' dir={`${pathName.split("/")[1] == 'ar' ? "rtl" : "ltr"}`}>
                 <Header/>
         <div className='mb-10 w-full h-10'></div>
@@ -34,6 +37,7 @@ export default function Layout({
             <DarkModeToggle/>
             <WhatsApp/>
         <Footer/>
+      </div>
       </div>
 
     </>
