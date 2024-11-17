@@ -1,6 +1,6 @@
 "use client"
 import Footer from '@/components/Footer';
-import Popup from "@/componenets/Card";
+import Popup from "@/components/Card";
 import DarkModeToggle from '@/components/shared/DarkModeToggle';
 import WhatsApp from '@/components/shared/WhatsApp';
 import Header from '@/components/SlideBar/Header';
